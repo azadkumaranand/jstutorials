@@ -23,7 +23,7 @@
     <script>
         document.querySelector('.p4').addEventListener('click', ()=>{
             document.querySelector('.p4').innerText = "Azad Kumar";
-        })
+        });
         // alert("azad kumar");
         //=>single line comment
 
@@ -35,6 +35,19 @@
          dsjfal
          aslkfdjal
          */
+        let changeHtml = `
+        <div style="background-color:red;color:white;">
+            Hello i am changed html
+            </div>
+        `;
+        let p = document.querySelector('p');
+        function myFunc(){
+            alert('hello everyone');
+            let none = "none";
+            p.innerHTML = changeHtml;
+            // p.style.display = none;
+        }
+        p.addEventListener('click', myFunc);
     </script>
     <script src=""></script>
 </body>
