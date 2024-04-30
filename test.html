@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<style>
+.box{
+    background-color: red;
+    width: 200px;
+    height: 200px;
+}
+</style>
+<body>
+    <div class="box">
+
+    </div>
+    <div class="input">
+        <input type="text" placeholder="Enter Name" value="Azad">
+    </div>
+
+    <script>
+        let x = 7;
+        
+        let box = document.querySelector('.box');
+        //click event
+        document.querySelector('.box').addEventListener('click', myFunc);
+        function myFunc(){
+            console.log("hello you function has been called");
+            for(let i=0; i<5; i++){
+                console.log("Jay Shree Ram", i);
+            }
+            box.style.backgroundColor = "blue";
+        }
+        //mouseover event
+        document.querySelector('.box').addEventListener('mouseover', myFunc1);
+        function myFunc1(){
+            box.style.backgroundColor = "green";
+        }
+
+        let input = document.querySelector('input');
+        document.querySelector('input').addEventListener('input', myFunc2);
+
+        function myFunc2(){
+            // console.log(document.querySelector('input').value);
+        }
+        document.querySelector('input').addEventListener('change', myFunc3);
+
+        function myFunc3(){
+            console.log(document.querySelector('input').value);
+        }
+    </script>
+</body>
+</html>
