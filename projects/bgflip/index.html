@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bg Flip</title>
+</head>
+<style>
+    .container{
+        background-color: aqua;
+        /* rgb */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+    }
+</style>
+<body>
+    <div class="container">
+        <div>
+            <div class="color-choosed"></div>
+            <button class="change-bg-btn">Change Bg Color</button>
+        </div>
+    </div>
+
+    <!-- <script src=""></script> -->
+    <script>
+        const btn = document.querySelector('.change-bg-btn');
+        const container = document.querySelector('.container');
+        btn.addEventListener('click', myfunc);
+        const colorChoosed = document.querySelector('.color-choosed');
+        function myfunc(){
+            let randNumber1 = Math.floor(Math.random()*100);
+            let randNumber2 = Math.floor(Math.random()*100);
+            let randNumber3 = Math.floor(Math.random()*100);
+            console.log(randNumber1, randNumber2, randNumber3);
+            // alert(randNumber);
+            let generatedColor = `rgb(${randNumber1},${randNumber2},${randNumber3})`;
+            container.style.backgroundColor = generatedColor;
+            colorChoosed.innerHTML = `<p style="color:white">${generatedColor}</p>`
+        }
+    </script>
+</body>
+</html>
